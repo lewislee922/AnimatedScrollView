@@ -34,20 +34,20 @@ public struct AnimatedScrollViewItem<Content, T>: View where Content: View, T: H
                     let size = localGeo.size
                     let origin = localGeo.frame(in: .named("Scrollable")).origin
                     let ratio = getTransitionState(from: origin, itemSize: size, viewSize: viewSize)
-                    let _ = update(transitionState: ratio)
+                    let _ = update(newState: ratio)
                     Color.clear
                         .onAppear {
-                            update(transitionState: ratio)
+                            update(newState: ratio)
                         }
                 }
             )
     }
     
-    private func update(transitionState: Double) {
+    private func update(newState: Double) {
         // set a treshould that prevent changing state too frequently.
-        if (abs(transitionState - transitionState) >= 0.005){
+        if (abs(transitionState - newState) >= 0.005){
             DispatchQueue.main.async {
-                self.transitionState = transitionState
+                self.transitionState = newState
             }
         }
     }
