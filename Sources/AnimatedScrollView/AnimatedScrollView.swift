@@ -35,20 +35,18 @@ public struct AnimatedScrollView<Content,T>: View where T: Hashable, Content: Vi
     public var body: some View {
         GeometryReader { geometry in
             ScrollView(axis) {
-                ZStack {
-                    if axis == .vertical {
-                        LazyVStack {
-                            ForEach(items, id: \.self) { item in
-                                AnimatedScrollViewItem(axis: axis, treshould: treshould, viewSize: geometry.size, item: item, itemBuilder: itemBuilder)
-                            }
+                if axis == .vertical {
+                    LazyVStack {
+                        ForEach(items, id: \.self) { item in
+                            AnimatedScrollViewItem(axis: axis, treshould: treshould, viewSize: geometry.size, item: item, itemBuilder: itemBuilder)
                         }
                     }
-                    
-                    if axis == .horizontal {
-                        LazyHStack {
-                            ForEach(items, id: \.self) { item in
-                                AnimatedScrollViewItem(axis: axis, treshould: treshould, viewSize: geometry.size, item: item, itemBuilder: itemBuilder)
-                            }
+                }
+                
+                if axis == .horizontal {
+                    LazyHStack {
+                        ForEach(items, id: \.self) { item in
+                            AnimatedScrollViewItem(axis: axis, treshould: treshould, viewSize: geometry.size, item: item, itemBuilder: itemBuilder)
                         }
                     }
                 }
