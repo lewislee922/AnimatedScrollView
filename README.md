@@ -2,4 +2,4 @@
 
 An ScrollView can add item transition when scrolling.
 
-Support iOS 12+, macOS 11+
+Support iOS 14+, macOS 11+

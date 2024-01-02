@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 13.0, macOS 11.0, *)
+@available(iOS 14.0, macOS 11.0, *)
 public struct AnimatedScrollViewItem<Content, T>: View where Content: View, T: Hashable {
     let axis: Axis.Set
     let viewSize: CGSize

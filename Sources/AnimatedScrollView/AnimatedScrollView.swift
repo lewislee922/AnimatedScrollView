@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 13.0, macOS 11.0, *)
+@available(iOS 14.0, macOS 11.0, *)
 public struct AnimatedScrollView<Content,T>: View where T: Hashable, Content: View {
     
     /// The value to activate view transition.
