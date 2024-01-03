@@ -4,7 +4,7 @@ A customized ScrollView can add item transition when scrolling.
 
 Support iOS 14+, macOS 11+
 
-<img src="[drawing.jpg](https://github.com/lewislee922/AnimatedScrollView/assets/33001057/859733b1-944e-46f7-bfd0-4b471c01c0f4)" alt="demo" height="400"/>
+<img src="https://github.com/lewislee922/AnimatedScrollView/assets/33001057/859733b1-944e-46f7-bfd0-4b471c01c0f4" alt="demo" height="420" width="260"/>
 
 ## Installation
 ### Swift Package Manager
