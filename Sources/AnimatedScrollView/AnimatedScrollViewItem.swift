@@ -9,6 +9,8 @@ import SwiftUI
 
 @available(iOS 14.0, macOS 11.0, *)
 public struct AnimatedScrollViewItem<Content, T>: View where Content: View, T: Hashable {
+    typealias T = Hashable
+    
     let axis: Axis.Set
     let viewSize: CGSize
     let treshould: Double

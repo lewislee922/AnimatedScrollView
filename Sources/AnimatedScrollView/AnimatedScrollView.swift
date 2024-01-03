@@ -9,6 +9,7 @@ import SwiftUI
 
 @available(iOS 14.0, macOS 11.0, *)
 public struct AnimatedScrollView<Content,T>: View where T: Hashable, Content: View {
+    typealias T = Hashable
     
     /// The value to activate view transition.
     ///
