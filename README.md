@@ -10,7 +10,7 @@ Support iOS 14+, macOS 11+
 ### Swift Package Manager
 
 ```swift
-.package(url: "https://github.com/lewislee922/AnimatedScrollView.git", from: "1.0.5")
+.package(url: "https://github.com/lewislee922/AnimatedScrollView.git", from: "1.0.6")
 ```
 
 Then `import AnimatedScrollView` in any Swift file in your module.
