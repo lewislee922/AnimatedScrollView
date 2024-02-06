@@ -72,10 +72,8 @@ public struct AnimatedScrollViewItem<Content, T>: View where Content: View, T: H
         
         if (anchor <= 0.0) {
             return (-anchor / item - treshould).clamped(to: 0...1)
-        }else if (anchor <= view) {
-            if(anchor < view - item) {
-                return 0.0
-            }
+        }else if (anchor < view - item) {
+            return 0.0
         }
         let newRatio = ((anchor - (view - item)) / item).clamped(to: 0...1)
         return (newRatio - treshould).clamped(to: 0...1)

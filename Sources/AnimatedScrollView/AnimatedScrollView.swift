@@ -11,8 +11,6 @@ import SwiftUI
 public struct AnimatedScrollView<Content,T>: View where T: Hashable, Content: View {
     typealias T = Hashable
     
-    /// The value to activate view transition.
-    ///
     let treshould: Double
     
     /// The scrollable axes of the scroll view.
@@ -20,7 +18,7 @@ public struct AnimatedScrollView<Content,T>: View where T: Hashable, Content: Vi
     /// The default value is ``Axis/vertical``.
     let axis: Axis.Set
     
-    /// The identified data to create views dynamically.
+    /// The hashable array to create views dynamically.
     let items: [T]
     
     /// Creates a view that represents item and view transition state.
